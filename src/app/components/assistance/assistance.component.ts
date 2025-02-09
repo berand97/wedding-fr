@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 interface Guest {
   maxGuests: number;
@@ -75,7 +76,8 @@ export class AssistanceComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private http: HttpClient,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private toastr: ToastrService
   ) {
     this.rsvpForm = this.fb.group({
       name: ['', Validators.required],
@@ -127,9 +129,11 @@ export class AssistanceComponent implements OnInit {
         next: (response: any) => {
           this.loading = false;
           if (response.success) {
+            this.toastr.success('Gracias por tu confirmación');
             this.successMessage = response.message || 'Gracias por tu confirmación';
             this.rsvpForm.reset();
           } else {
+            this.toastr.warning('Error al enviar la confirmación');
             this.errorMessage = response.message || 'Error al enviar la confirmación';
           }
         },
