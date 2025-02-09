@@ -1,0 +1,96 @@
+<section class="wpo-contact-section section-padding pt-0" id="rsvp">
+    <div class="container-fluid">
+        <div class="contact-wrap">
+            <div class="row">
+                <div class="col col-xl-8 col-lg-7 col-md-12 col-12">
+                    <div class="contact-img-wrap">
+                        <div class="contact-img wow fadeInLeftSlow" data-wow-duration="1700ms">
+                            <img src="/images/rsvp/weeding.png" alt="" width="600" height="400" />
+                        </div>
+                        <div class="back-shape">
+                            <svg viewBox="0 0 693 954" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15 346.5C15 163.418 163.418 15 346.5 15C529.582 15 678 163.418 678 346.5V939H15V346.5Z"
+                                    stroke="#9F7B59" stroke-width="30" />
+                                <rect x="50" y="168" width="30" height="765" fill="#9F7B59" />
+                                <rect x="100" y="106" width="30" height="827" fill="#9F7B59" />
+                                <rect x="150" y="67" width="30" height="866" fill="#9F7B59" />
+                                <rect x="200" y="45" width="30" height="879" fill="#9F7B59" />
+                                <rect x="250" y="23" width="30" height="910" fill="#9F7B59" />
+                                <rect x="300" y="14" width="30" height="919" fill="#9F7B59" />
+                                <rect x="350" y="14" width="30" height="919" fill="#9F7B59" />
+                                <rect x="400" y="14" width="30" height="919" fill="#9F7B59" />
+                                <rect x="450" y="34" width="30" height="899" fill="#9F7B59" />
+                                <rect x="500" y="67" width="30" height="866" fill="#9F7B59" />
+                                <rect x="550" y="100" width="30" height="833" fill="#9F7B59" />
+                                <rect x="600" y="148" width="30" height="785" fill="#9F7B59" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-xl-4 col-lg-5 col-md-12 col-12">
+                    <div class="wpo-contact-section-wrapper wow fadeInRightSlow" data-wow-duration="1700ms">
+                        <div class="wpo-contact-form-area">
+                            <div class="wpo-section-title">
+                                <h2>Estariamos encantados de tu presencia</h2>
+                            </div>
+                            <form *ngIf="isValidGuest" [formGroup]="rsvpForm" (ngSubmit)="onSubmit()"
+                                class="contact-validation-active">
+                                <div>
+                                    <input type="text" class="form-control" formControlName="name" placeholder="Nombre"
+                                        readonly />
+                                </div>
+                                <div class="radio-buttons">
+                                    <p>
+                                        <input type="radio" id="attend" formControlName="attendance" value="attend" />
+                                        <label for="attend">Si, estaré allí</label>
+                                    </p>
+                                    <p>
+                                        <input type="radio" id="not" formControlName="attendance" value="not" />
+                                        <label for="not">No, no puedo asistir</label>
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <select formControlName="guest" class="form-control">
+                                        <option value="" disabled>Número de invitados</option>
+                                        <option *ngFor="let num of guestNumbers" [value]="num">
+                                            {{num.toString().padStart(2, '0')}}
+                                        </option>
+                                    </select>
+                                </div>
+
+                                <div class="submit-area">
+                                    <button type="submit" class="theme-btn" [disabled]="loading || !rsvpForm.valid">
+                                        Confirmar asistencia
+                                    </button>
+                                    <div *ngIf="loading" class="c-loader">
+                                        <i class="ti-reload"></i>
+                                    </div>
+                                </div>
+
+                                <div class="clearfix error-handling-messages">
+                                    <div *ngIf="successMessage" class="success">
+                                        {{successMessage}}
+                                    </div>
+                                    <div *ngIf="errorMessage" class="error">
+                                        {{errorMessage}}
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shape-1 wow fadeInLeftSlow" data-wow-duration="2000ms">
+                <img ngSrc="/images/rsvp/left-shape.png" alt="" width="200" height="200" />
+            </div>
+            <div class="shape-2 wow fadeInRightSlow" data-wow-duration="2000ms">
+                <img ngSrc="/images/rsvp/right-shape.png" alt="" width="200" height="200" />
+            </div>
+        </div>
+    </div>
+    <div class="bottom-text marquee">
+        <h2>Te Esperamos para celebrar nuestro Amor.</h2>
+    </div>
+</section>

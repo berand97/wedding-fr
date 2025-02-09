@@ -32,9 +32,33 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "public/css/themify-icons.css",
+              "public/css/font-awesome.min.css",
+              "public/css/flaticon.css",
+              "public/css/bootstrap.min.css",
+              "public/css/animate.css",
+              "public/css/owl.carousel.css",
+              "public/css/owl.theme.css",
+              "public/css/slick.css",
+              "public/css/slick-theme.css",
+              "public/css/swiper.min.css",
+              "public/css/nice-select.css",
+              "public/css/owl.transitions.css",
+              "public/css/magnific-popup.css",
+              "public/css/jquery.fancybox.css",
+              "public/css/odometer-theme-default.css",
+              "public/css/jquery-ui.css",
+              "public/sass/style.css"
             ],
-            "scripts": []
+            "scripts": [
+              "public/js/jquery.min.js",
+              "public/js/bootstrap.bundle.min.js",
+              "public/js/modernizr.custom.js",
+              "public/js/jquery-plugin-collection.js",
+              "public/js/gsap-active.js",
+              "public/js/script.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -42,7 +66,7 @@
                 {
                   "type": "initial",
                   "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumError": "3MB"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -91,12 +115,16 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              ""
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "b1ead07d-9ba2-4b25-b6d0-28a38ecf9887"
   }
 }
