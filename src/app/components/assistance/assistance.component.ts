@@ -47,7 +47,7 @@ export class AssistanceComponent implements OnInit {
     "eliecer-rojas": { maxGuests: 3, nombre: "Eliecer Rojas & Familia" },
     "rocio-rojas": { maxGuests: 4, nombre: "Rocio Rojas & Familia" },
     "fernando-rojas": { maxGuests: 5, nombre: "Fernando Rojas & Familia" },
-    "leidy-rojas": { maxGuests: 3, nombre: "Leidy Rojas & Familia" },
+    "leidy-rojas": { maxGuests: 5, nombre: "Leidy Rojas & Familia" },
     "gonzalo-forero": { maxGuests: 1, nombre: "Gonzalo Forero" },
     "amanda-rojas": { maxGuests: 3, nombre: "Amanda Rojas & Familia" },
     "lorena-rojas": { maxGuests: 4, nombre: "Lorena Rojas & Familia" },
