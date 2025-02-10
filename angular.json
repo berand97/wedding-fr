@@ -53,6 +53,8 @@
               "public/sass/style.css"
             ],
             "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/jquery-countdown/dist/jquery.countdown.min.js",
               "public/js/jquery.min.js",
               "public/js/bootstrap.bundle.min.js",
               "public/js/modernizr.custom.js",
