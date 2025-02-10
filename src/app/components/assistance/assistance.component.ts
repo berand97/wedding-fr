@@ -71,6 +71,9 @@ export class AssistanceComponent implements OnInit {
     "javier-landazabal": { maxGuests: 3, nombre: "Javier Landazabal" },
     "pastor-caro": { maxGuests: 4, nombre: "Pastor Caro & Familia" },
     "gabriel-patino": { maxGuests: 1, nombre: "Gabriel patiño" },
+    "tatiana-rico": { maxGuests: 1, nombre: "Tatiana Rico" },
+    "ismael-hernandez": { maxGuests: 1, nombre: "Ismael Hernandez" }
+
   } as const;
 
   constructor(
