@@ -61,7 +61,7 @@ export class AssistanceComponent implements OnInit {
     "leonel-patino": { maxGuests: 3, nombre: "Leonel Patiño & Nubia Bermudez" },
     "valentina-echeverry": { maxGuests: 1, nombre: "Valentina Echeverry" },
     "norbey-echeverry": { maxGuests: 1, nombre: "Norbey Echeverry" },
-    "duvia-echeverry": { maxGuests: 3, nombre: "Duvia Echeverry & Familia" },
+    "duvia-echeverry": { maxGuests: 1, nombre: "Duvia Echeverry" },
     "claudia-patino": { maxGuests: 4, nombre: "Claudia Patiño & Familia" },
     "carlos-rico": { maxGuests: 1, nombre: "Carlos Rico" },
     "katherine-montana": { maxGuests: 2, nombre: "Katherine Montaña" },
@@ -72,9 +72,10 @@ export class AssistanceComponent implements OnInit {
     "pastor-caro": { maxGuests: 4, nombre: "Pastor Caro & Familia" },
     "gabriel-patino": { maxGuests: 1, nombre: "Gabriel patiño" },
     "tatiana-rico": { maxGuests: 1, nombre: "Tatiana Rico" },
-    "ismael-hernandez": { maxGuests: 1, nombre: "Ismael Hernandez" }
-
-  } as const;
+    "ismael-hernandez": { maxGuests: 1, nombre: "Ismael Hernandez" },
+    "ferney-patino": { maxGuests: 1, nombre: "Ferney Patiño" },
+    "norbey-echeverri": { maxGuests: 1, nombre: "Norbey Echeverry" }
+      } as const;
 
   constructor(
     private fb: FormBuilder,
